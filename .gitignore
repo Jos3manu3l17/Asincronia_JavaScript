@@ -1,0 +1,9 @@
+# Ignora la carpeta pesada de dependencias
+node_modules/
+
+# Ignora los archivos de registro de errores
+npm-debug.log*
+
+# Ignora configuraciones del editor (opcional)
+.vscode/
+.DS_Store

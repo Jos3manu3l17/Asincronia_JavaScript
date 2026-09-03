@@ -1,75 +1,72 @@
-// console.log("Inicio");
-// setTimeout(() => {
-//     console.log("Primer mensaje después de 5 segundos");
-// }, 5000);
+import { 
+  proceso, 
+  cicloGigante, 
+  procesarPedido, 
+  tomarDatos, 
+  procesarDatos, 
+  mostrarResultado,
+  tomandoDatos,
+    procesandoDatos,
+    mostrandoResultado,
+    procesoProbabilidad,
+    esperarDosSegundos,
+    ejecutar
+} from './index.js';
 
-// console.log("final");
 
-// console.log("1");
+// ejercicio1 ---------
+// proceso();
 
-// setTimeout(() => {
-//     console.log("2");
-// }, 0);
 
-// console.log("3");
+// ejercicio2 --------
+// cicloGigante();
 
-// function terminar() {
-//     console.log("Proceso terminado");
-// }
 
-// setTimeout(terminar, 2000);
-
-// const promesa = new Promise((resolve, reject) => {
-
-//     const correcto = true;
-
-//     if (correcto) {
-//         resolve("Todo correcto");
-//     } else {
-//         reject("Algo salió mal");
-//     }
+// ejercicio3 --------
+// procesarPedido(() => {
+//     console.log("Notificacion: Gracias por tu compra, vuelve pronto");
 // });
 
-// promesa.then((resultado) => {
+
+// ejercicio4 --------
+// tomarDatos((datos) => {
+
+//     procesarDatos(datos, (resultado) => {
+
+//         mostrarResultado(resultado, () => {
+
+//             console.log("Proceso terminado");
+//         });
+
+//     });
+// });
+
+
+
+// ejercicio5 ---------
+
+// tomandoDatos()
+//     .then((datos) => {
+//         return procesandoDatos(datos);
+//     })
+//     .then((resultado) => {
+//         return mostrandoResultado(resultado);
+//     })
+//     .then(() => {
+//         console.log("Proceso terminado");
+//     });
+
+
+
+// ejercicio6 ---------
+// procesoProbabilidad()
+// .then ((resultado) => {
 //     console.log(resultado);
+// })
+// .catch((error) => {
+//     console.log("Error: ", error);
 // });
 
-
-// function procesarUsuario (nombre, callback) {
-
-//     console.log("Procesando usuario");
-//     setTimeout(() => {
-//     console.log("Usuario procesado");
-//     callback(nombre);
-//     }, 2000);
-// }
-
-// procesarUsuario ("Jose", (nombre) => {
-//     console.log("Bienvenido ", nombre);
-// })
-
-function procesarUsuario(nombre) {
-
-    return new Promise ((resolve, reject) => {
-
-        setTimeout(() => {
-
-            if (nombre) {
-                resolve(`Usuario ${nombre} procesado`);
-            } else {
-                reject("No se ha proporcionado un nombre de usuario");
-            }
-            
-        }), 2000;
-    })
-}
-
-procesarUsuario("Jose") 
-.then((resultado) => {
-    console.log(resultado);
-})
-
-.catch ((error) => {
-    console.log("Error ", error);
-    
-});
+ 
+// ejercicio7 ---------
+// ejecutar ();

@@ -3,11 +3,17 @@
 // Escribe un código que imprima “Inicio”, luego una operación con setTimeout que tarde 
 // 2 segundos  y finalmente “Fin”. Meta: que reconozcan el orden real de ejecución. 
 
-console.log("Inicio");
+ export function proceso () {
+    
+    console.log("Inicio");
 
-setTimeout (() => {
-    console.log("Operacion que tarda 2 segundos");
+    setTimeout (() => {
+        console.log("Operacion que tarda 2 segundos");
 }, 2000);
 
-console.log("Fin");
+    console.log("Fin");
+}
+
+
+
 

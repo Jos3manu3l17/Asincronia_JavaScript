@@ -4,7 +4,7 @@
 // y  reject. Meta: entender .catch() y la importancia del manejo de errores. 
 
 
-function proceso () {
+ export function procesoProbabilidad () {
     return new Promise ((resolve, reject) => {
 
         console.log("Procesando...");
@@ -21,10 +21,3 @@ function proceso () {
     });
 }
 
-proceso()
-.then ((resultado) => {
-    console.log(resultado);
-})
-.catch((error) => {
-    console.log("Error: ", error);
-});

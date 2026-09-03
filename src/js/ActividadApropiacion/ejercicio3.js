@@ -4,7 +4,7 @@
 // setTimeout de  3 segundos y que reciba un callback para mostrar un mensaje final, 
 // por ejemplo: “Pedido  entregado”. Meta: comprender la ejecución diferida. 
 
-function procesarPedido (callback) {
+export function procesarPedido (callback) {
 
     console.log("Tu pedido ha sido agendado");
     
@@ -13,7 +13,3 @@ function procesarPedido (callback) {
         callback();
     }, 3000);
 }
-
-procesarPedido (() => {
-    console.log("Notificacion: Gracias por tu compra, vuelve pronto");
-});

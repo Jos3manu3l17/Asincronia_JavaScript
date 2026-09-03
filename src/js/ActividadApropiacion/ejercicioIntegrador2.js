@@ -6,6 +6,8 @@ const ordenes = [
     { id: 3, cliente: "María", monto: 150000 }
 ];
 
+// proceso con callback ---------
+
 // function verificar(orden, callback) {
 //     setTimeout(() => {
 //         console.log("Verificación completada");
@@ -54,7 +56,7 @@ const ordenes = [
 
 
 
-// Proceso con promesas
+// Proceso con promesas ---------
 
 // function verificar(orden) {
 //     return new Promise((resolve) => {
@@ -100,7 +102,7 @@ const ordenes = [
 //         console.log("Orden terminada");
 //     });
 
-// proceso con asincAwait
+// proceso con asincAwait --------
 
 function verificar(orden) {
     return new Promise((resolve) => {

@@ -3,7 +3,7 @@
 // Convertir el ejercicio anterior en una estructura basada en Promesas con .then(). Meta: 
 // visualizar cómo mejora la legibilidad.
 
-function tomarDatos() {
+ export function tomandoDatos() {
     return new Promise((resolve) => {
         setTimeout(() => {
             const datos = "Datos obtenidos";
@@ -15,7 +15,7 @@ function tomarDatos() {
     });
 }
 
-function procesarDatos(datos) {
+export function procesandoDatos(datos) {
     return new Promise((resolve) => {
         setTimeout(() => {
             const resultado = datos + " y procesados";
@@ -27,7 +27,7 @@ function procesarDatos(datos) {
     });
 }
 
-function mostrarResultado(resultado) {
+export function mostrandoResultado(resultado) {
     return new Promise((resolve) => {
         setTimeout(() => {
             console.log("Resultado final:", resultado);
@@ -37,13 +37,4 @@ function mostrarResultado(resultado) {
     });
 }
 
-tomarDatos()
-    .then((datos) => {
-        return procesarDatos(datos);
-    })
-    .then((resultado) => {
-        return mostrarResultado(resultado);
-    })
-    .then(() => {
-        console.log("Proceso terminado");
-    });
+

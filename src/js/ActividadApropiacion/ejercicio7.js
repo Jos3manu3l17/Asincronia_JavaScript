@@ -3,7 +3,7 @@
 // Crear una función async que espere una promesa de 2 segundos y luego muestre el resultado. 
 // Meta: comprender cómo await pausa la ejecución sin bloquear el hilo. 
 
-function esperarDosSegundos () {
+export function esperarDosSegundos () {
     return new Promise ((resolve) => {
         setTimeout (() => {
             resolve ("La promesa termino")
@@ -11,7 +11,7 @@ function esperarDosSegundos () {
     });
 }
 
-async function ejecutar() {
+export async function ejecutar() {
     console.log("Esperar");
     
     const resultado = await esperarDosSegundos();
@@ -20,5 +20,3 @@ async function ejecutar() {
     
     console.log("Fin");
 };
-
-ejecutar ();

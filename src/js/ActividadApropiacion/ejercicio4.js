@@ -5,7 +5,7 @@
 // Meta: mostrar la complejidad que aparece cuando las tareas dependen unas de otras. 
 
 
-function tomarDatos(callback) {
+export function tomarDatos(callback) {
     setTimeout(() => {
         const datos = "Datos obtenidos";
 
@@ -15,7 +15,7 @@ function tomarDatos(callback) {
     }, 1000);
 }
 
-function procesarDatos(datos, callback) {
+export function procesarDatos(datos, callback) {
     setTimeout(() => {
         const resultado = datos + " y procesados";
 
@@ -25,25 +25,10 @@ function procesarDatos(datos, callback) {
     }, 2000);
 }
 
-function mostrarResultado(resultado, callback) {
+export function mostrarResultado(resultado, callback) {
     setTimeout(() => {
         console.log("Resultado final:", resultado);
 
         callback();
     }, 1000);
 }
-
-
-tomarDatos((datos) => {
-
-    procesarDatos(datos, (resultado) => {
-
-        mostrarResultado(resultado, () => {
-
-            console.log("Proceso terminado");
-        });
-
-    });
-});
-
-tomarDatos (...);
